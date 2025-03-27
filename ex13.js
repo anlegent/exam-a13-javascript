@@ -1,0 +1,23 @@
+function genererDescriptions(personnes) {
+  let arr1 = [];
+  let arr2 = [];
+  arr1.push(personnes[0].nom + " a " + personnes[0].age + " ans.");
+  arr2.push(personnes[1].nom + " a " + personnes[1].age + " ans.");
+  console.log(arr1);
+  console.log(arr2);
+}
+
+console.log(
+  genererDescriptions([
+    { nom: "Alice", age: 25 },
+    { nom: "Bob", age: 30 },
+  ])
+);
+// Résultat attendu : ["Alice a 25 ans.", "Bob a 30 ans."]
+console.log(
+  genererDescriptions([
+    { nom: "", age: 0 },
+    { nom: "John", age: 4 },
+  ])
+);
+// Résultat attendu : [" a 0 ans.", "John a 4 ans."]
